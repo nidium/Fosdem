@@ -1,0 +1,8 @@
+[
+    Constructor(cstring name),
+    className=Robot,
+    exposed=class
+] interface Robot
+{          
+    void echo(cstring data);
+};
