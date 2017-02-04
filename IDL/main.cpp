@@ -15,5 +15,5 @@ int main() {
 
     JSRobot::RegisterObject(njs->getJSContext());
 
-    njs->LoadScript("../robot.js");
+    njs->LoadScript("robot.js");
 }

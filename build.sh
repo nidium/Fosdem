@@ -21,7 +21,7 @@ clang++ VanillaJS/main.cpp -o VanillaRobot \
     -std=c++11 \
     -ljs_static -lmozglue -lnspr4 -lz 
 
-clang++ -v IDL/main.cpp IDL/JSRobot.cpp -o IDLRobot \
+clang++ IDL/main.cpp IDL/JSRobot.cpp -o IDLRobot \
     -I$NIDIUM_PATH/src/ \
     -I$NIDIUM_PATH/src/libapenetwork/src/ \
     -I$NIDIUM_PATH/third-party/mozilla-central/js/src/obj/dist/include/ \
