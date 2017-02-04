@@ -1,8 +1,16 @@
 #!/bin/sh
-git clone http://www.github.com/nidum/Nidium/
-git clone http://www.github.com/nidum/NidiumTools/
-PYTHONPATH=NidiumTools/src/
+set -e
+if [ ! -d "Nidium" ]; then
+    git clone --recursive https://github.com/nidium/Nidium.git
+fi
+
+if [ ! -d "NidiumTools" ]; then
+    git clone https://github.com/nidium/NidiumTools.git
+fi
+
+export PYTHONPATH=`pwd`/NidiumTools/src/
 NIDIUM_PATH=Nidium/
+
 cd Nidium
 ./configure_libnidiumcore
 cd ..
